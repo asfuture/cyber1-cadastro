@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="table-light">
+        <tr>
+          <th hidden>ID</th>
+          <th class="text-center">Nome</th>
+          <th class="text-center">E-mail</th>
+          <th class="text-center">Telefone</th>
+          <th class="text-center">Endereço</th>
+          <th class="text-center">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of user">
+          <td hidden>{{item.id!}}</td>
+          <td class="text-center">{{item.nome}}</td>
+          <td class="text-center">{{item.email}}</td>
+          <td class="text-center">{{item.telefone}}</td>
+          <td class="text-center">{{item.endereco}}</td>
+          <td class="text-center">
+            <i class="fa-solid fa-file-pen me-2 p-2" style="color: #74C0FC; cursor: pointer;" (click)="editar(item.id!)"></i>
+            <i class="fa-solid fa-trash p-2" style="color: #cd1d52; cursor: pointer;" (click)="deletar(item.id!)"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

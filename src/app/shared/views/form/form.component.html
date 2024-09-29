@@ -1,0 +1,63 @@
+<div [ngClass]="{'modaltrue': openModal == true,
+'modalfalse':openModal == false  }">
+<form class="container rounded bg-white mt-2 pb-5 " [formGroup]="form" >
+    <h5 class="fs-4 text-center text-secondary fw-bold pt-3 mb-5 ">{{titulo}}</h5> 
+    <i *ngIf="openModal;" class="fa-solid fa-rectangle-xmark fs-2  float-end" (click)="close()"></i>
+  
+    <div class="row">
+      <!-- Coluna para Nome e E-mail -->
+      <div class="col-md-6 mb-4">
+        <div class="mb-3">
+          <label for="nome" class="form-label fw-bold text-secondary">Nome*</label>
+          <input type="text" class="form-control rounded" id="nome" formControlName="nome" maxlength="80">
+          <!-- Verificação de Erros -->
+          <ng-container *ngIf="form.controls['nome'].touched && form.controls['nome'].invalid">
+            <span *ngIf="form.controls['nome'].errors?.['required']" style="color:red;">Campo obrigatório!</span>
+          </ng-container>
+        </div>
+  
+        <div class="mb-3">
+          <label for="email" class="form-label fw-bold text-secondary">E-mail*</label>
+          <input type="email" class="form-control rounded" id="email" formControlName="email" maxlength="100">
+          <!-- Verificação de Erros -->
+          <ng-container *ngIf="form.controls['email'].touched && form.controls['email'].invalid">
+            <span *ngIf="form.controls['email'].errors?.['required']" style="color:red;">Campo obrigatório!</span>
+          </ng-container>
+        </div>
+      </div>
+  
+      <!-- Coluna para Endereço e Telefone -->
+      <div class="col-md-6 mb-4">
+        <div class="mb-3">
+          <label for="endereco" class="form-label fw-bold text-secondary">Endereço*</label>
+          <input type="text" class="form-control rounded" id="endereco" formControlName="endereco">
+          <!-- Verificação de Erros -->
+          <ng-container *ngIf="form.controls['endereco'].touched && form.controls['endereco'].invalid">
+            <span *ngIf="form.controls['endereco'].errors?.['required']" style="color:red;">Campo obrigatório!</span>
+          </ng-container>
+        </div>
+  
+        <div class="mb-3">
+          <label for="telefone" class="form-label fw-bold text-secondary">Telefone*</label>
+          <input type="text" class="form-control rounded" id="telefone" formControlName="telefone" maxlength="15" mask="(00) 00000-0000" placeholder="(00) 00000-0000">
+          <!-- Verificação de Erros -->
+          <ng-container *ngIf="form.controls['telefone'].touched && form.controls['telefone'].invalid">
+            <span *ngIf="form.controls['telefone'].errors?.['required']" style="color:red;">Campo obrigatório!</span>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  
+    <div class="d-flex justify-content-center">
+      <button *ngIf="openModal == false;" (click)="onSubmit()" class="btn btn-primary mt-4" style="width: 200px;">
+        <i class="fa-solid fa-paper-plane me-2" style="color: #fff;"></i>
+        Enviar
+      </button>
+      
+      <button *ngIf="openModal;" (click)="onSubmitUpdate()" class="btn btn-primary mt-4" style="width: 200px;">
+        <i class="fa-solid fa-paper-plane me-2" style="color: #fff;"></i>
+        Atualizar
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,27 +1,68 @@
-# Cyber1Cadastro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+### CRUD Application - Cyber1 Cadastro
 
-## Development server
+Este projeto é uma aplicação CRUD (Create, Read, Update, Delete) com Angular no front-end e PHP no back-end, utilizando MySQL como banco de dados. Ele permite a criação, leitura, atualização e exclusão de registros por meio de uma interface amigável, com a comunicação entre frontend e backend via API REST.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades do Frontend
+- Listagem de registros: Visualização de todos os registros existentes no sistema.
+- Formulário de criação/edição: Interface para criar ou atualizar registros.
+- Exclusão de registros: Botão para remover registros.
+- Validações de formulário: Implementação de validações para garantir a entrada correta de dados.
+  
+## Tecnologias Utilizadas
 
-## Code scaffolding
+- Angular 18.2.3
+- Node v21.6.1
+- HTML5
+- CSS3
+- BootStrap5
+- TypeScript
+- RxJS
+  
+### Arquitetura
+-  MVVM 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Pré-requisitos
 
-## Build
+- Node.js (v21.6.1)
+- Angular CLI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Passos para Rodar o Projeto Localmente
+1. Clone o repositório:
+    ```bash
+    git clone git@github.com:asfuture/cyber1-cadastro.git
+    cd cyber1-cadastro
+    ```
+2. Instale as dependências:
+    ```bash
+    npm install
+    ```
+3. Rode a aplicação:
+    ```bash
+    ng serve
+    ```
+4. Acesse a aplicação no navegador:
+    ```
+    http://localhost:4200
+    ```
+## Utilizando Docker
+### Passos para Baixar a imagem Docker
 
-## Running unit tests
+1. Para baixar a imagem Docker da aplicação, utilize o comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+docker pull asfuture/cyber1cadastro:latest
+```
 
-## Running end-to-end tests
+2. Para rodar a aplicação usando Docker, utilize o comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+docker run -p 8080:80 asfuture/cyber1cadastro:latest
+```
 
-## Further help
+3. Acesse a aplicação no navegador:
+   
+http://localhost:8080
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+#### Autor: Alex Ferreira
+

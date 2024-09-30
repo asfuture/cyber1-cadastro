@@ -10,9 +10,8 @@ Este projeto é uma aplicação CRUD (Create, Read, Update, Delete) com Angular 
 - Validações de formulário: Implementação de validações para garantir a entrada correta de dados.
 
 ### A aplicação está hospedada no vercel e pode ser acessada por este link:
-- 
+- https://cyber1-cadastro.vercel.app/
 
-  
 - GitHub API: https://github.com/asfuture/api-php
   
 ## Tecnologias Utilizadas

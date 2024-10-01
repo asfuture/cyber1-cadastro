@@ -27,7 +27,7 @@ getUsuarios() {
       .subscribe({
         next: (response) => {
           this.user = response || [] ;
-          console.log("dados  ",this.user )
+          //console.log("dados  ",this.user )
         },
         error: (error) => {
           console.error('Erro ao obter estados:', error);
